@@ -1,7 +1,6 @@
-/**
- * SPDX-License-Identifier:MIT
- */
-pragma solidity ^0.7.6;
+// SPDX-License-Identifier:MIT
+
+pragma solidity ^0.8.11;
 
 import "@opengsn/contracts/src/BaseRelayRecipient.sol";
 
@@ -12,8 +11,8 @@ contract CaptureTheFlag is BaseRelayRecipient {
     address public currentHolder = address(0);
 
     constructor(address forwarder) {
-      // trustedForwarder = forwarder;
       _setTrustedForwarder(forwarder);
+      // trustedForwarder = forwarder;
     }
 
     string public override versionRecipient = "2.2.0";
