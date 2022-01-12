@@ -12,7 +12,8 @@ contract CaptureTheFlag is BaseRelayRecipient {
     address public currentHolder = address(0);
 
     constructor(address forwarder) {
-      trustedForwarder = forwarder;
+      // trustedForwarder = forwarder;
+      _setTrustedForwarder(forwarder);
     }
 
     string public override versionRecipient = "2.2.0";
